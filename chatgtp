@@ -1,0 +1,60 @@
+ it — I’ll give you simple, exam-ready commands from scratch so you can confidently do push, clone, and pull 👍
+
+🔹 1. INITIAL SETUP (only once)
+git config --global user.name "Your Name"
+git config --global user.email "your_email@example.com"
+🔹 2. CREATE + PUSH PROJECT (Local → GitHub)
+Step 1: Go to your project folder
+cd your-folder-name
+Step 2: Initialize git
+git init
+Step 3: Add files
+git add .
+Step 4: Commit
+git commit -m "First commit"
+Step 5: Connect to GitHub repo
+
+(After creating repo on GitHub)
+
+git remote add origin https://github.com/username/repository-name.git
+Step 6: Push to GitHub
+git branch -M main
+git push -u origin main
+🔹 3. CLONE REPOSITORY (GitHub → Local)
+git clone https://github.com/username/repository-name.git
+
+Then go inside:
+
+cd repository-name
+🔹 4. PULL LATEST CHANGES
+git pull origin main
+🔹 5. PUSH CHANGES AGAIN (after editing files)
+git add .
+git commit -m "Updated files"
+git push origin main
+🔹 QUICK MEMORY TRICK (VERY IMPORTANT FOR EXAM)
+
+👉 Push = Local → GitHub
+👉 Pull = GitHub → Local
+👉 Clone = Copy repo to your system
+
+🔹 COMMON ERRORS (just in case)
+❌ Permission error
+
+Use:
+
+git config --global credential.helper store
+❌ Repo already exists
+
+Skip git init
+
+🔹 SUPER SHORT VERSION (for writing in exam)
+git init
+git add .
+git commit -m "msg"
+git remote add origin <repo-url>
+git push -u origin main
+
+git clone <repo-url>
+
+git pull origin main
